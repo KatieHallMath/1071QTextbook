@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2023-01-12T13:37:05-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Logarithmic Functions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="OpenStax Calculus">
+<meta property="book:author" content="Custom Business Calculus Edition ">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX Course: Title Here';
+eBookConfig.basecourse = 'PTX Base Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.acDefaultLanguage = 'python';
+eBookConfig.runestone_version = '5.0.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runtime.b0f8547c48f16a9f.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runestone.0e9550fe42760516.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/runestone.e4d5592da655219f.css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="OpenStaxBusinessCalc.html"><span class="title">OpenStax Calculus:</span> <span class="subtitle">Volume 1</span></a></h1>
+<p class="byline">Custom Business Calculus Edition</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_Ch1Sec5.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_first.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="ch_second.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_Ch1Sec5.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_first.html" title="Up">Up</a><a class="next-button button toolbar-item" href="ch_second.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="meta_frontmatter.html" data-scroll="meta_frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="meta_frontmatter-preface.html" data-scroll="meta_frontmatter-preface" class="internal">Preface: OpenStax Calculus Volume 1</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2" class="internal">Preface: Business Calculus Custom Edition</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_first.html" data-scroll="ch_first" class="internal"><span class="codenumber">1</span> <span class="title">Functions and Graphs</span></a><ul>
+<li><a href="sec_Ch1Sec0.html" data-scroll="sec_Ch1Sec0" class="internal">Exponents</a></li>
+<li><a href="sec_Ch1Sec1.html" data-scroll="sec_Ch1Sec1" class="internal">Review of Functions: Part A</a></li>
+<li><a href="sec_Ch1Sec1B.html" data-scroll="sec_Ch1Sec1B" class="internal">Review of Functions: Part B</a></li>
+<li><a href="sec_Ch1Sec2.html" data-scroll="sec_Ch1Sec2" class="internal">Basic Classes of Functions: Part A, Lines</a></li>
+<li><a href="sec_Ch1Sec2PartB.html" data-scroll="sec_Ch1Sec2PartB" class="internal">Basic Classes of Functions: Part B, Polynomials and Rational Functions</a></li>
+<li><a href="sec_Ch1Sec3.html" data-scroll="sec_Ch1Sec3" class="internal">Mathematical Modeling</a></li>
+<li><a href="sec_Ch1Sec5.html" data-scroll="sec_Ch1Sec5" class="internal">Exponential Functions</a></li>
+<li><a href="sec_Ch1Sec5B.html" data-scroll="sec_Ch1Sec5B" class="active">Logarithmic Functions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_second.html" data-scroll="ch_second" class="internal"><span class="codenumber">2</span> <span class="title">Limits</span></a><ul>
+<li><a href="sec_Ch2Sec1.html" data-scroll="sec_Ch2Sec1" class="internal">A Preview of Calculus</a></li>
+<li><a href="sec_Ch2Sec2.html" data-scroll="sec_Ch2Sec2" class="internal">The Limit of a Function</a></li>
+<li><a href="sec_Ch2Sec3.html" data-scroll="sec_Ch2Sec3" class="internal">The Limit Laws</a></li>
+<li><a href="sec_Ch2Sec4.html" data-scroll="sec_Ch2Sec4" class="internal">Continuity</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_third.html" data-scroll="ch_third" class="internal"><span class="codenumber">3</span> <span class="title">Derivatives</span></a><ul>
+<li><a href="sec_Ch3Sec1.html" data-scroll="sec_Ch3Sec1" class="internal">Defining the Derivative</a></li>
+<li><a href="sec_Ch3Sec2.html" data-scroll="sec_Ch3Sec2" class="internal">The Derivative as a Function</a></li>
+<li><a href="sec_Ch3Sec3.html" data-scroll="sec_Ch3Sec3" class="internal">Differentiation Rules</a></li>
+<li><a href="sec_Ch3Sec4.html" data-scroll="sec_Ch3Sec4" class="internal">Derivatives as Rates of Change</a></li>
+<li><a href="sec_Ch3Sec5.html" data-scroll="sec_Ch3Sec5" class="internal">Derivatives of Trigonometric Functions(not covered)</a></li>
+<li><a href="sec_Ch3Sec6.html" data-scroll="sec_Ch3Sec6" class="internal">The Chain Rule</a></li>
+<li><a href="sec_Ch3Sec7.html" data-scroll="sec_Ch3Sec7" class="internal">Derivatives of Inverse Functions</a></li>
+<li><a href="sec_Ch3Sec8.html" data-scroll="sec_Ch3Sec8" class="internal">Implicit Differentiation</a></li>
+<li><a href="sec_Ch3Sec9.html" data-scroll="sec_Ch3Sec9" class="internal">Derivatives of Exponential and Logarithmic Functions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_fourth.html" data-scroll="ch_fourth" class="internal"><span class="codenumber">4</span> <span class="title">Application of Derivatives</span></a><ul>
+<li><a href="sec_Ch4Sec1.html" data-scroll="sec_Ch4Sec1" class="internal">Elasticity of Demand</a></li>
+<li><a href="sec_Ch4Sec2.html" data-scroll="sec_Ch4Sec2" class="internal">Linear Approximations </a></li>
+<li><a href="sec_Ch4Sec3.html" data-scroll="sec_Ch4Sec3" class="internal">Maxima and Minima</a></li>
+<li><a href="sec_Ch4Sec4.html" data-scroll="sec_Ch4Sec4" class="internal">The Mean Value Theorem(not covered)</a></li>
+<li><a href="sec_Ch4Sec5.html" data-scroll="sec_Ch4Sec5" class="internal">Derivatives and the Shape of a Graph</a></li>
+<li><a href="sec_Ch4Sec6.html" data-scroll="sec_Ch4Sec6" class="internal">Limits at Infinity and Asymptotes</a></li>
+<li><a href="sec_Ch4Sec7.html" data-scroll="sec_Ch4Sec7" class="internal">Applied Optimization Problems</a></li>
+<li><a href="sec_Ch4Sec10.html" data-scroll="sec_Ch4Sec10" class="internal">Antiderivatives</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_fifth.html" data-scroll="ch_fifth" class="internal"><span class="codenumber">5</span> <span class="title">Integration</span></a><ul>
+<li><a href="sec_Ch5Sec1.html" data-scroll="sec_Ch5Sec1" class="internal">Approximating Areas</a></li>
+<li><a href="sec_Ch5Sec2.html" data-scroll="sec_Ch5Sec2" class="internal">The Definite Integral</a></li>
+<li><a href="sec_Ch5Sec3.html" data-scroll="sec_Ch5Sec3" class="internal">The Fundamental Theorem of Calculus</a></li>
+<li><a href="sec_Ch5Sec4.html" data-scroll="sec_Ch5Sec4" class="internal">Integration Formulas and the Net Change Theorem(not covered)</a></li>
+<li><a href="sec_Ch5Sec5.html" data-scroll="sec_Ch5Sec5" class="internal">Substitution</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_sixth.html" data-scroll="ch_sixth" class="internal"><span class="codenumber">6</span> <span class="title">Application of Integration</span></a><ul><li><a href="sec_Ch6Sec1.html" data-scroll="sec_Ch6Sec1" class="internal">Areas between Curves</a></li></ul>
+</li>
+<li class="link backmatter"><a href="meta_backmatter.html" data-scroll="meta_backmatter" class="internal"><span class="title">Backmatter</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="sec_Ch1Sec5B"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.8</span> <span class="title">Logarithmic Functions</span>
+</h2>
+<section class="introduction" id="introduction-15"><h3 class="heading">Learning Objectives.<span></span>
+</h3>
+<ol class="decimal">
+<li id="li-310"><p id="p-derived-li-310">Identify the form of a logarithmic function.</p></li>
+<li id="li-311"><p id="p-derived-li-311">Explain the relationship between exponential and logarithmic functions.</p></li>
+<li id="li-312"><p id="p-derived-li-312">Describe how to calculate a logarithm to a different base.</p></li>
+</ol>
+<p id="p-339">In this section we examine  logarithmic functions. We use the properties of these functions to solve equations involving exponential and logarithmic terms. Note: This the second half of section 1.5 in the original version of OpenStax Calculus.</p></section><section class="subsection" id="subsection-40"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.8.1</span> <span class="title">Logarithmic Functions</span>
+</h3>
+<p id="p-340">Using our understanding of exponential functions, we can discuss their inverses, which are the logarithmic functions. These come in handy when we need to consider any phenomenon that varies over a wide range of values, such as pH in chemistry or decibels in sound levels.</p>
+<p id="p-341">The exponential function <span class="process-math">\(f(x)=b^x\)</span> is one-to-one, with domain <span class="process-math">\((-\infty,\infty)\)</span> and range <span class="process-math">\((0,\infty).\)</span> Therefore, it has an inverse function, called the logarithmic function with base <span class="process-math">\(b.\)</span> For any <span class="process-math">\(b\gt 0,b\neq 1,\)</span> the logarithmic function with base b, denoted <span class="process-math">\(\log_b ,\)</span> has domain <span class="process-math">\((0,\infty)\)</span> and range <span class="process-math">\((-\infty,\infty),\)</span> and satisfies</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/CNX_Calc_Figure_01_05_004.html ./knowl/CNX_Calc_Figure_01_05_005.html">
+\begin{equation*}
+\log_b (x)=y \text{ if and only if } b^y=x.
+\end{equation*}
+</div>
+<p id="p-342">For example,</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/CNX_Calc_Figure_01_05_004.html ./knowl/CNX_Calc_Figure_01_05_005.html" id="md-4">
+\begin{align*}
+\log_2 (8)=3 \amp \text{ since } 2^3=8,\\
+\log_{10}\left( \frac{1}{100}\right)=−2 \amp \text{ since } 10^{−2}= \frac{1}{10^2}= \frac{1}{100},\\
+\log_b (1)=0 \amp \text{ since } b^0=1 \text{ for any base } b\gt 0.
+\end{align*}
+</div>
+<p id="p-343">Furthermore, since <span class="process-math">\(y=\log_b (x)\)</span> and <span class="process-math">\(y=b^x\)</span> are inverse functions,</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/CNX_Calc_Figure_01_05_004.html ./knowl/CNX_Calc_Figure_01_05_005.html">
+\begin{equation*}
+\log_b (b^x)=x \text{ and } b^{\log_b (x)}=x.
+\end{equation*}
+</div>
+<p id="p-344">The most commonly used logarithmic function is the function <span class="process-math">\(\log_e .\)</span> Since this function uses natural <span class="process-math">\(e\)</span> as its base, it is called the <dfn class="terminology">natural logarithm</dfn>. Here we use the notation <span class="process-math">\(\ln(x)\)</span> or <span class="process-math">\(\ln x\)</span> to mean <span class="process-math">\(\log_e (x).\)</span> For example,</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/CNX_Calc_Figure_01_05_004.html ./knowl/CNX_Calc_Figure_01_05_005.html">
+\begin{equation*}
+\ln(e)=\log_e (e)=1,\ln(e^3)=\log_e (e^3)=3,\ln(1)=\log_e (1)=0.
+\end{equation*}
+</div>
+<p id="p-345">Since the functions <span class="process-math">\(f(x)=e^x\)</span> and <span class="process-math">\(g(x)=\ln(x)\)</span> are inverses of each other,</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/CNX_Calc_Figure_01_05_004.html ./knowl/CNX_Calc_Figure_01_05_005.html">
+\begin{equation*}
+\ln(e^x)=x \text{ and } e^{\ln x}=x,
+\end{equation*}
+</div>
+<p id="p-346">and their graphs are symmetric about the line <span class="process-math">\(y=x\)</span> (<a href="" class="xref" data-knowl="./knowl/CNX_Calc_Figure_01_05_004.html" title="Figure 1.122">Figure 1.122</a>).</p>
+<figure class="figure figure-like" id="CNX_Calc_Figure_01_05_004"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_05_004.jpg" class="contained" alt='"An image of a graph. The x axis runs from -3 to 3 and the y axis runs from -3 to 4. The graph is of two functions. The first function is “f(x) = e to power of x”, an increasing curved function that starts slightly above the x axis. The y intercept is at the point (0, 1) and there is no x intercept. The second function is “f(x) = ln(x)”, an increasing curved function. The x intercept is at the point (1, 0) and there is no y intercept. A dotted line with label “y = x” is also plotted on the graph, to show that the functions are mirror images over this line."'></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.122<span class="period">.</span></span><span class="space"> </span>The functions <span class="process-math">\(y=e^x\)</span> and <span class="process-math">\(y=\ln(x)\)</span> are inverses of each other, so their graphs are symmetric about the line <span class="process-math">\(y=x.\)</span></figcaption></figure><p id="p-347">Another frequently used logarithmic function is the function <span class="process-math">\(\log_{10} .\)</span> It is called the <dfn class="terminology">common logarithm</dfn>. Here we use the notation <span class="process-math">\(\log(x)\)</span> or <span class="process-math">\(\log x\)</span> to mean <span class="process-math">\(\log_{10} (x).\)</span> For example,</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/CNX_Calc_Figure_01_05_004.html ./knowl/CNX_Calc_Figure_01_05_005.html">
+\begin{equation*}
+\log(10)=\log_{10} (10)=1,\log(1000)=\log_{10}(10^3)=3,\log(1)=\log_{10} (1)=0.
+\end{equation*}
+</div>
+<article class="note remark-like" id="note-10"><h4 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">1.123</span><span class="period">.</span><span class="space"> </span><span class="title">Media.</span>
+</h4>
+<p id="p-348">At this <a class="external" href="http://www.openstax.org/l/20_logscale" target="_blank">site</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-13" id="fn-13"><sup> 1 </sup></a> you can see an example of a base-10 logarithmic scale.</p></article><p id="p-349">In general, for any base <span class="process-math">\(b\gt 0,b\neq 1,\)</span> the function <span class="process-math">\(g(x)=\log_b (x)\)</span> is symmetric about the line <span class="process-math">\(y=x\)</span> with the function <span class="process-math">\(f(x)=b^x.\)</span> Using this fact and the graphs of the exponential functions, we graph functions <span class="process-math">\(\log_b \)</span> for several values of <span class="process-math">\(b\gt 1\)</span> (<a href="" class="xref" data-knowl="./knowl/CNX_Calc_Figure_01_05_005.html" title="Figure 1.124">Figure 1.124</a>).</p>
+<figure class="figure figure-like" id="CNX_Calc_Figure_01_05_005"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_05_005.jpg" class="contained" alt='"An image of a graph. The x axis runs from -3 to 3 and the y axis runs from 0 to 4. The graph is of three functions. All three functions a log functions that are increasing curved functions that start slightly to the right of the y axis and have an x intercept at (1, 0). The first function is “y = log base 10 (x)”, the second function is “f(x) = ln(x)”, and the third function is “y = log base 2 (x)”. The third function increases the most rapidly, the second function increases next most rapidly, and the third function increases the slowest."'></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.124<span class="period">.</span></span><span class="space"> </span>Graphs of <span class="process-math">\(y=\log_b (x)\)</span> are depicted for <span class="process-math">\(b=2,e,10.\)</span></figcaption></figure><p id="p-350">Before solving some equations involving exponential and logarithmic functions, let’s review the basic properties of logarithms.</p>
+<article class="note remark-like" id="note-11"><h4 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">1.125</span><span class="period">.</span><span class="space"> </span><span class="title">Rule: Properties of Logarithms.</span>
+</h4>
+<p id="p-351">If <span class="process-math">\(a,b,c\gt 0,b\neq 1,\)</span> and <span class="process-math">\(r\)</span> is any real number, then</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-5">
+\begin{align*}
+1. \log_b (ac)=\log_b (a)+\log_b (c) \amp \text{ (Product property) }\\
+2. \log_b \left( \frac{a}{c}\right)=\log_b (a)−\log_b (c) \amp \text{ (Quotient property) }\\
+3. \log_b (a^r)=r\log_b (a) \amp \text{ (Power property) }
+\end{align*}
+</div></article><article class="example example-like" id="example-31"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.126</span><span class="period">.</span><span class="space"> </span><span class="title">Solving Equations Involving Exponential Functions.</span>
+</h4>
+<p id="p-352">Solve each of the following equations for <span class="process-math">\(x.\)</span></p>
+<ol class="decimal">
+<li id="li-313"><p id="p-derived-li-313"><span class="process-math">\(\displaystyle 5^x=2\)</span></p></li>
+<li id="li-314"><p id="p-derived-li-314"><span class="process-math">\(\displaystyle e^x+6e^{-x}=5\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-56" id="solution-56"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-56"><div class="solution solution-like"><ol class="decimal">
+<li id="li-315"><p id="p-derived-li-315">Applying the natural logarithm function to both sides of the equation, we have<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\ln5^x=\ln 2.
+\end{equation*}
+</div>Using the power property of logarithms,<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+x\ln 5=\ln 2.
+\end{equation*}
+</div>Therefore, <span class="process-math">\(x=\ln 2/\ln 5.\)</span></p></li>
+<li id="li-316"><p id="p-derived-li-316">Multiplying both sides of the equation by <span class="process-math">\(e^x,\)</span> we arrive at the equation<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+e^{2x}+6=5e^x.
+\end{equation*}
+</div>Rewriting this equation as<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+e^{2x}−5e^x+6=0,
+\end{equation*}
+</div>we can then rewrite it as a quadratic equation in <span class="process-math">\(e^x.\)</span><div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(e^x)^2−5(e^x)+6=0.
+\end{equation*}
+</div>Now we can solve the quadratic equation. Factoring this equation, we obtain<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(e^x−3)(e^x−2)=0.
+\end{equation*}
+</div>Therefore, the solutions satisfy <span class="process-math">\(e^x=3\)</span> and <span class="process-math">\(e^x=2.\)</span> Taking the natural logarithm of both sides gives us the solutions <span class="process-math">\(x=\ln 3,\ln 2.\)</span></p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-26"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.127</span><span class="period">.</span>
+</h4>
+<p id="p-353">Solve <span class="process-math">\(e^{-x}/(3+e^{-x})=1/2.\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-23" id="hint-23"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-23"><div class="hint solution-like"><p id="p-354">First solve the equation for <span class="process-math">\(e^{-x}.\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-57" id="solution-57"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-57"><div class="solution solution-like"><p id="p-355"><span class="process-math">\(x=\frac{\ln 3}{2}\)</span></p></div></div>
+</div></article><article class="example example-like" id="example-32"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.128</span><span class="period">.</span><span class="space"> </span><span class="title">Solving Equations Involving Logarithmic Functions.</span>
+</h4>
+<p id="p-356">Solve each of the following equations for <span class="process-math">\(x.\)</span></p>
+<ol class="decimal">
+<li id="li-317"><p id="p-derived-li-317"><span class="process-math">\(\displaystyle \ln\left(\frac{1}{x}\right)=4\)</span></p></li>
+<li id="li-318"><p id="p-derived-li-318"><span class="process-math">\(\displaystyle \log_{10}\sqrt{x}+\log_{10}x=2\)</span></p></li>
+<li id="li-319"><p id="p-derived-li-319"><span class="process-math">\(\displaystyle \ln(2x)−3\ln(x^2)=0\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-58" id="solution-58"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-58"><div class="solution solution-like"><ol class="decimal">
+<li id="li-320"><p id="p-derived-li-320">By the definition of the natural logarithm function,<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\ln\left(\frac{1}{x}\right)=4 \text{ if and only if } e^4=\frac{1}{2}.
+\end{equation*}
+</div>Therefore, the solution is <span class="process-math">\(x=1/e^4.\)</span></p></li>
+<li id="li-321"><p id="p-derived-li-321">Using the product and power properties of logarithmic functions, rewrite the left-hand side of the equation as<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\log_{10}\sqrt{x}+\log_{10}x=\log_{10}x\sqrt{x}=\log_{10}x^{3/2}=\frac{3}{2}\log_{10}x.
+\end{equation*}
+</div>Therefore, the equation can be rewritten as<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{3}{2}\log_{10}x=2 \text{ or } \log_{10}x=\frac{4}{3}.
+\end{equation*}
+</div>The solution is <span class="process-math">\(x=10^{4/3}=10\sqrt[3]{10}.\)</span></p></li>
+<li id="li-322"><p id="p-derived-li-322">Using the power property of logarithmic functions, we can rewrite the equation as <span class="process-math">\(\ln(2x)−\ln(x^6)=0.\)</span> Using the quotient property, this becomes<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\ln\left(\frac{2}{x^5}\right)=0.
+\end{equation*}
+</div>Therefore, <span class="process-math">\(2/x^5=1,\)</span> which implies <span class="process-math">\(x=\sqrt[5]{2}.\)</span> We should then check for any extraneous solutions.</p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-27"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.129</span><span class="period">.</span>
+</h4>
+<p id="p-357">Solve <span class="process-math">\(\ln(x^3)−4&gt;\ln(x)=1.\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-24" id="hint-24"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-24"><div class="hint solution-like"><p id="p-358">First use the power property, then use the product property of logarithms.</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-59" id="solution-59"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-59"><div class="solution solution-like"><p id="p-359"><span class="process-math">\(x=\frac{1}{e}\)</span></p></div></div>
+</div></article><p id="p-360">When evaluating a logarithmic function with a calculator, you may have noticed that the only options are <span class="process-math">\(\log_{10}\)</span> or log, called the <dfn class="terminology">common logarithm</dfn>, or ln, which is the natural logarithm. However, exponential functions and logarithm functions can be expressed in terms of any desired base <span class="process-math">\(b.\)</span> If you need to use a calculator to evaluate an expression with a different base, you can apply the change-of-base formulas first. Using this change of base, we typically write a given exponential or logarithmic function in terms of the natural exponential and natural logarithmic functions.</p>
+<article class="note remark-like" id="note-12"><h4 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">1.130</span><span class="period">.</span><span class="space"> </span><span class="title">Rule: Change-of-Base Formulas.</span>
+</h4>
+<p id="p-361">Let <span class="process-math">\(a\gt 0,b\gt 0,\)</span> and <span class="process-math">\(a\neq 1,b\neq 1.\)</span></p>
+<ol class="decimal">
+<li id="li-323"><p id="p-derived-li-323"><span class="process-math">\(a^x=b^{\log_b a^x}\)</span> for any real number <span class="process-math">\(x.\)</span> If <span class="process-math">\(b=e,\)</span> this equation reduces to <span class="process-math">\(a^x=e^{\log_e a^x}=e^{x\ln a}.\)</span></p></li>
+<li id="li-324"><p id="p-derived-li-324"><span class="process-math">\(\log_a x=\frac{\log_b x}{\log_b a}\)</span> for any real number <span class="process-math">\(x\gt 0.\)</span> If <span class="process-math">\(b=e,\)</span> this equation reduces to <span class="process-math">\(\log_a x=\frac{\ln x}{\ln a}.\)</span></p></li>
+</ol></article><article class="example example-like" id="example-33"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.131</span><span class="period">.</span><span class="space"> </span><span class="title">Changing Bases.</span>
+</h4>
+<p id="p-362">Use a calculating utility to evaluate <span class="process-math">\(\log_{3}7\)</span> with the change-of-base formula presented earlier.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-60" id="solution-60"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-60"><div class="solution solution-like">
+<p id="p-363">Use the second equation with <span class="process-math">\(a=3\)</span> and <span class="process-math">\(e=3.\)</span></p>
+<p id="p-364"><span class="process-math">\(\log_{3}7=\frac{\ln 7}{\ln 3}≈1.77124.\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-28"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.132</span><span class="period">.</span>
+</h4>
+<p id="p-365">Use the change-of-base formula and a calculating utility to evaluate <span class="process-math">\(\log_{4}6.\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-25" id="hint-25"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-25"><div class="hint solution-like"><p id="p-366">Use the change of base to rewrite this expression in terms of expressions involving the natural logarithm function.</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-61" id="solution-61"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-61"><div class="solution solution-like"><p id="p-367"><span class="process-math">\(1.29248\)</span></p></div></div>
+</div></article><article class="example example-like" id="example-34"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.133</span><span class="period">.</span><span class="space"> </span><span class="title">Chapter Opener: The Richter Scale for Earthquakes.</span>
+</h4>
+<figure class="figure figure-like" id="CNX_Calc_Figure_01_05_010"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_05_013.jpg" class="contained" alt='"A photograph of an earthquake fault."'></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.134<span class="period">.</span></span><span class="space"> </span>(credit: modification of work by Robb Hannawacker, NPS)</figcaption></figure><p id="p-368">In 1935, Charles Richter developed a scale (now known as the <dfn class="terminology">Richter scale</dfn>) to measure the magnitude of an <dfn class="terminology">earthquake</dfn>. The scale is a base-10 logarithmic scale, and it can be described as follows: Consider one earthquake with magnitude <span class="process-math">\(R_1\)</span> on the Richter scale and a second earthquake with magnitude <span class="process-math">\(R_2\)</span> on the Richter scale. Suppose <span class="process-math">\(R_1\gt R_2,\)</span> which means the earthquake of magnitude <span class="process-math">\(R_1\)</span> is stronger, but how much stronger is it than the other earthquake? A way of measuring the intensity of an earthquake is by using a seismograph to measure the amplitude of the earthquake waves. If <span class="process-math">\(A_1\)</span> is the amplitude measured for the first earthquake and <span class="process-math">\(A_2\)</span> is the amplitude measured for the second earthquake, then the amplitudes and magnitudes of the two earthquakes satisfy the following equation:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+R_1−R_2=\log_{10}\left(\frac{A_1}{A_2}\right).
+\end{equation*}
+</div>
+<p id="p-369">Consider an earthquake that measures 8 on the Richter scale and an earthquake that measures 7 on the Richter scale. Then,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+8−7=\log_{10}\left(\frac{A_1}{A_2}\right).
+\end{equation*}
+</div>
+<p id="p-370">Therefore,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\log_{10}\left(\frac{A_1}{A_2}\right)=1,
+\end{equation*}
+</div>
+<p id="p-371">which implies <span class="process-math">\(A_1/A_2=10\)</span> or <span class="process-math">\(A_1=10A_2.\)</span> Since <span class="process-math">\(A_1\)</span> is 10 times the size of <span class="process-math">\(A_2,\)</span> we say that the first earthquake is 10 times as intense as the second earthquake. On the other hand, if one earthquake measures 8 on the Richter scale and another measures 6, then the relative intensity of the two earthquakes satisfies the equation</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\log_{10}\left(\frac{A_1}{A_2}\right)=8−6=2.
+\end{equation*}
+</div>
+<p id="p-372">Therefore, <span class="process-math">\(A_1=100A_2.\)</span> That is, the first earthquake is 100 times more intense than the second earthquake.</p>
+<p id="p-373">How can we use logarithmic functions to compare the relative severity of the magnitude 9 earthquake in Japan in 2011 with the magnitude 7.3 earthquake in Haiti in 2010?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-62" id="solution-62"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-62"><div class="solution solution-like">
+<p id="p-374">To compare the Japan and Haiti earthquakes, we can use an equation presented earlier:</p>
+<p id="p-375"><span class="process-math">\(9−7.3=\log_{10}\left(\frac{A_1}{A_2}\right).\)</span></p>
+<p id="p-376">Therefore, <span class="process-math">\(A_1/A_2=10^1.7,\)</span> and we conclude that the earthquake in Japan was approximately <span class="process-math">\(50\)</span> times more intense than the earthquake in Haiti.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-29"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.135</span><span class="period">.</span>
+</h4>
+<p id="p-377">Compare the relative severity of a magnitude <span class="process-math">\(8.4\)</span> earthquake with a magnitude <span class="process-math">\(7.4\)</span> earthquake.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-26" id="hint-26"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-26"><div class="hint solution-like"><p id="p-378"><span class="process-math">\(R_1−R_2=\log_{10}\left(A_1/A_2\right).\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-63" id="solution-63"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-63"><div class="solution solution-like"><p id="p-379">The magnitude <span class="process-math">\(8.4\)</span> earthquake is roughly <span class="process-math">\(10\)</span> times as severe as the magnitude <span class="process-math">\(7.4\)</span> earthquake.</p></div></div>
+</div></article></section><section class="subsection" id="subsection-41"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.8.2</span> <span class="title">Key Concepts</span>
+</h3>
+<ul class="disc">
+<li id="li-325"><p id="p-derived-li-325">The logarithmic function <span class="process-math">\(y=\log_b (x)\)</span> is the inverse of <span class="process-math">\(y=b^x.\)</span> Its domain is <span class="process-math">\((0,\infty)\)</span> and its range is <span class="process-math">\((-\infty,\infty).\)</span></p></li>
+<li id="li-326"><p id="p-derived-li-326">The natural logarithmic function is <span class="process-math">\(y=\ln x=\log_e x.\)</span></p></li>
+<li id="li-327"><p id="p-derived-li-327">Given an exponential function or logarithmic function in base <span class="process-math">\(a,\)</span> we can make a change of base to convert this function to any base <span class="process-math">\(b\gt 0,b\neq 1.\)</span> We typically convert to base <span class="process-math">\(e.\)</span></p></li>
+</ul></section><section class="conclusion" id="conclusion-8"><p id="p-380">This book is a custom edition based on OpenStax Calculus Volume 1. You can download the original for free at <a class="external" href="https://openstax.org/details/books/calculus-volume-1" target="_blank">https://openstax.org/details/books/calculus-volume-1.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-14" id="fn-14"><sup> 2 </sup></a></p>
+<p id="p-381">Additional practice exercises are available in at the bottom on this section in OpenStax Calculus Volume 1: <a class="external" href="https://openstax.org/books/calculus-volume-1/pages/1-5-exponential-and-logarithmic-functions" target="_blank"><code class="code-inline tex2jax_ignore">https://openstax.org/books/calculus-volume-1/pages/1-5-exponential-and-logarithmic-functions</code></a></p></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-13"><div class="fn"><code class="code-inline tex2jax_ignore">openstax.org/l/20_logscale</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-14"><div class="fn"><code class="code-inline tex2jax_ignore">https://openstax.org/details/books/calculus-volume-1</code></div></div>
+</div></main>
+</div>
+</body>
+</html>

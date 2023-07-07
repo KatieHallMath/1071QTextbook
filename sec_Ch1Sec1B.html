@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2023-01-12T13:37:04-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Review of Functions: Part B</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="OpenStax Calculus">
+<meta property="book:author" content="Custom Business Calculus Edition ">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX Course: Title Here';
+eBookConfig.basecourse = 'PTX Base Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.acDefaultLanguage = 'python';
+eBookConfig.runestone_version = '5.0.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runtime.b0f8547c48f16a9f.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/637.d54be67956c5c660.bundle.js"></script><script type="text/javascript" src="https://runestone.academy/cdn/runestone/6.2.1/runestone.0e9550fe42760516.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/637.fafafbd97df8a0d1.css">
+<link rel="stylesheet" type="text/css" href="https://runestone.academy/cdn/runestone/6.2.1/runestone.e4d5592da655219f.css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="OpenStaxBusinessCalc.html"><span class="title">OpenStax Calculus:</span> <span class="subtitle">Volume 1</span></a></h1>
+<p class="byline">Custom Business Calculus Edition</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_Ch1Sec1.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_first.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_Ch1Sec2.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_Ch1Sec1.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_first.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_Ch1Sec2.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="meta_frontmatter.html" data-scroll="meta_frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="meta_frontmatter-preface.html" data-scroll="meta_frontmatter-preface" class="internal">Preface: OpenStax Calculus Volume 1</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2" class="internal">Preface: Business Calculus Custom Edition</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_first.html" data-scroll="ch_first" class="internal"><span class="codenumber">1</span> <span class="title">Functions and Graphs</span></a><ul>
+<li><a href="sec_Ch1Sec0.html" data-scroll="sec_Ch1Sec0" class="internal">Exponents</a></li>
+<li><a href="sec_Ch1Sec1.html" data-scroll="sec_Ch1Sec1" class="internal">Review of Functions: Part A</a></li>
+<li><a href="sec_Ch1Sec1B.html" data-scroll="sec_Ch1Sec1B" class="active">Review of Functions: Part B</a></li>
+<li><a href="sec_Ch1Sec2.html" data-scroll="sec_Ch1Sec2" class="internal">Basic Classes of Functions: Part A, Lines</a></li>
+<li><a href="sec_Ch1Sec2PartB.html" data-scroll="sec_Ch1Sec2PartB" class="internal">Basic Classes of Functions: Part B, Polynomials and Rational Functions</a></li>
+<li><a href="sec_Ch1Sec3.html" data-scroll="sec_Ch1Sec3" class="internal">Mathematical Modeling</a></li>
+<li><a href="sec_Ch1Sec5.html" data-scroll="sec_Ch1Sec5" class="internal">Exponential Functions</a></li>
+<li><a href="sec_Ch1Sec5B.html" data-scroll="sec_Ch1Sec5B" class="internal">Logarithmic Functions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_second.html" data-scroll="ch_second" class="internal"><span class="codenumber">2</span> <span class="title">Limits</span></a><ul>
+<li><a href="sec_Ch2Sec1.html" data-scroll="sec_Ch2Sec1" class="internal">A Preview of Calculus</a></li>
+<li><a href="sec_Ch2Sec2.html" data-scroll="sec_Ch2Sec2" class="internal">The Limit of a Function</a></li>
+<li><a href="sec_Ch2Sec3.html" data-scroll="sec_Ch2Sec3" class="internal">The Limit Laws</a></li>
+<li><a href="sec_Ch2Sec4.html" data-scroll="sec_Ch2Sec4" class="internal">Continuity</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_third.html" data-scroll="ch_third" class="internal"><span class="codenumber">3</span> <span class="title">Derivatives</span></a><ul>
+<li><a href="sec_Ch3Sec1.html" data-scroll="sec_Ch3Sec1" class="internal">Defining the Derivative</a></li>
+<li><a href="sec_Ch3Sec2.html" data-scroll="sec_Ch3Sec2" class="internal">The Derivative as a Function</a></li>
+<li><a href="sec_Ch3Sec3.html" data-scroll="sec_Ch3Sec3" class="internal">Differentiation Rules</a></li>
+<li><a href="sec_Ch3Sec4.html" data-scroll="sec_Ch3Sec4" class="internal">Derivatives as Rates of Change</a></li>
+<li><a href="sec_Ch3Sec5.html" data-scroll="sec_Ch3Sec5" class="internal">Derivatives of Trigonometric Functions(not covered)</a></li>
+<li><a href="sec_Ch3Sec6.html" data-scroll="sec_Ch3Sec6" class="internal">The Chain Rule</a></li>
+<li><a href="sec_Ch3Sec7.html" data-scroll="sec_Ch3Sec7" class="internal">Derivatives of Inverse Functions</a></li>
+<li><a href="sec_Ch3Sec8.html" data-scroll="sec_Ch3Sec8" class="internal">Implicit Differentiation</a></li>
+<li><a href="sec_Ch3Sec9.html" data-scroll="sec_Ch3Sec9" class="internal">Derivatives of Exponential and Logarithmic Functions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_fourth.html" data-scroll="ch_fourth" class="internal"><span class="codenumber">4</span> <span class="title">Application of Derivatives</span></a><ul>
+<li><a href="sec_Ch4Sec1.html" data-scroll="sec_Ch4Sec1" class="internal">Elasticity of Demand</a></li>
+<li><a href="sec_Ch4Sec2.html" data-scroll="sec_Ch4Sec2" class="internal">Linear Approximations </a></li>
+<li><a href="sec_Ch4Sec3.html" data-scroll="sec_Ch4Sec3" class="internal">Maxima and Minima</a></li>
+<li><a href="sec_Ch4Sec4.html" data-scroll="sec_Ch4Sec4" class="internal">The Mean Value Theorem(not covered)</a></li>
+<li><a href="sec_Ch4Sec5.html" data-scroll="sec_Ch4Sec5" class="internal">Derivatives and the Shape of a Graph</a></li>
+<li><a href="sec_Ch4Sec6.html" data-scroll="sec_Ch4Sec6" class="internal">Limits at Infinity and Asymptotes</a></li>
+<li><a href="sec_Ch4Sec7.html" data-scroll="sec_Ch4Sec7" class="internal">Applied Optimization Problems</a></li>
+<li><a href="sec_Ch4Sec10.html" data-scroll="sec_Ch4Sec10" class="internal">Antiderivatives</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_fifth.html" data-scroll="ch_fifth" class="internal"><span class="codenumber">5</span> <span class="title">Integration</span></a><ul>
+<li><a href="sec_Ch5Sec1.html" data-scroll="sec_Ch5Sec1" class="internal">Approximating Areas</a></li>
+<li><a href="sec_Ch5Sec2.html" data-scroll="sec_Ch5Sec2" class="internal">The Definite Integral</a></li>
+<li><a href="sec_Ch5Sec3.html" data-scroll="sec_Ch5Sec3" class="internal">The Fundamental Theorem of Calculus</a></li>
+<li><a href="sec_Ch5Sec4.html" data-scroll="sec_Ch5Sec4" class="internal">Integration Formulas and the Net Change Theorem(not covered)</a></li>
+<li><a href="sec_Ch5Sec5.html" data-scroll="sec_Ch5Sec5" class="internal">Substitution</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_sixth.html" data-scroll="ch_sixth" class="internal"><span class="codenumber">6</span> <span class="title">Application of Integration</span></a><ul><li><a href="sec_Ch6Sec1.html" data-scroll="sec_Ch6Sec1" class="internal">Areas between Curves</a></li></ul>
+</li>
+<li class="link backmatter"><a href="meta_backmatter.html" data-scroll="meta_backmatter" class="internal"><span class="title">Backmatter</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="sec_Ch1Sec1B"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.3</span> <span class="title">Review of Functions: Part B</span>
+</h2>
+<section class="introduction" id="introduction-5"><h3 class="heading">Learning Objectives.<span></span>
+</h3>
+<ol class="decimal">
+<li id="li-146"><p id="p-derived-li-146">Define when a function is increasing, decreasing, concave up and concave down.</p></li>
+<li id="li-147"><p id="p-derived-li-147">Make new functions from two or more given functions.</p></li>
+<li id="li-148"><p id="p-derived-li-148">Describe the symmetry properties of a function.</p></li>
+</ol>
+<p id="p-102">We will continue to discuss functions. We will define what it means for a function to be increasing, decreasing, concave up and concave down, look at symmetries of functions and see various ways to get new functions from given ones. This is a continuation of Review of Functions Part A. In the original OpenStax Calculus Book, it is the second half of section 1.1.</p></section><section class="subsection" id="subsection-19"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.3.1</span> <span class="title">Increasing and Decresing</span>
+</h3>
+<p id="p-103">In part A, we looked at the graph of <span class="process-math">\(f(x)=-4x+2 \)</span> which is reproduced below.</p>
+<figure class="figure figure-like" id="CNX_Calc_Figure_01_01_007a"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/CNX_Calc_Figure_01_01_007.jpg" class="contained" alt='"An image of a graph. The y axis runs from -2 to 5 and the x axis runs from -2 to 5. The graph is of the function “f(x) = -4x + 2”, which is a decreasing straight line. There are two points plotted on the function at (0, 2) and (1/2, 0)."'></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.34<span class="period">.</span></span><span class="space"> </span>The function <span class="process-math">\(f(x)=-4x+2\)</span> is a line with <span class="process-math">\(x\)</span>-intercept <span class="process-math">\((1/2,0)\)</span> and <span class="process-math">\(y\)</span>-intercept <span class="process-math">\((0,2).\)</span></figcaption></figure><p id="p-104">Note that for this function and the function <span class="process-math">\(f(x)=-4x+2\)</span> graphed in <a href="" class="xref" data-knowl="./knowl/CNX_Calc_Figure_01_01_007a.html" title="Figure 1.34">Figure 1.34</a>, the values of <span class="process-math">\(f(x)\)</span> are getting smaller as <span class="process-math">\(x\)</span> is getting larger. A function with this property is said to be decreasing. On the other hand, for the function <span class="process-math">\(f(x)=\sqrt{x+3}+1\)</span> graphed in <a href="" class="xref" data-knowl="./knowl/CNX_Calc_Figure_01_01_008.html" title="Figure 1.29">Figure 1.29</a>, the values of <span class="process-math">\(f(x)\)</span> are getting larger as the values of <span class="process-math">\(x\)</span> are getting larger. A function with this property is said to be increasing. It is important to note, however, that a function can be increasing on some interval or intervals and decreasing over a different interval or intervals. For example, using our temperature function in <a href="" class="xref" data-knowl="./knowl/CNX_Calc_Figure_01_01_005.html" title="Figure 1.21">Figure 1.21</a>, we can see that the function is decreasing on the interval <span class="process-math">\((0,4),\)</span> increasing on the interval <span class="process-math">\((4,14),\)</span> and then decreasing on the interval <span class="process-math">\((14,23).\)</span> We make the idea of a function increasing or decreasing over a particular interval more precise in the next definition.</p>
+<article class="definition definition-like" id="definition-2"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.35</span><span class="period">.</span>
+</h4>
+<p id="p-105">We say that a function <span class="process-math">\(f\)</span> is <dfn class="terminology">increasing on the interval <span class="process-math">\(I\)</span></dfn> if for all <span class="process-math">\(x_1,x_2\in I,\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x_1) \leq f(x_2) \text{ when } x_1 &lt; x_2.
+\end{equation*}
+</div>
+<p id="p-106">We say <span class="process-math">\(f\)</span> is <dfn class="terminology">strictly increasing on the interval <span class="process-math">\(I\)</span></dfn> if for all <span class="process-math">\(x_1,x_2\in I,\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x_1) &lt; f(x_2) \text{ when } x_1 &lt; x_2.
+\end{equation*}
+</div>
+<p id="p-107">We say that a function <span class="process-math">\(f\)</span> is <dfn class="terminology">decreasing on the interval <span class="process-math">\(I\)</span></dfn> if for all <span class="process-math">\(x_1,x_2\in I,\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x_1)\geq f(x_2) \text{ when }x_1 &lt; x_2.
+\end{equation*}
+</div>
+<p id="p-108">We say that a function <span class="process-math">\(f\)</span> is <dfn class="terminology">strictly decreasing on the interval <span class="process-math">\(I\)</span></dfn> if for all <span class="process-math">\(x_1,x_2\in I,\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x_1) &gt; f(x_2) \text{ when }x_1 &lt; x_2.
+\end{equation*}
+</div></article><p id="p-109">For example, the function <span class="process-math">\(f(x)=3x\)</span> is increasing on the interval <span class="process-math">\((-\infty, \infty)\)</span> because <span class="process-math">\(3x_1 &lt; 3x_2\)</span> whenever <span class="process-math">\(x_1 &lt; x_2.\)</span> On the other hand, the function <span class="process-math">\(f(x)=-x^3\)</span> is decreasing on the interval <span class="process-math">\((-\infty, \infty)\)</span> because <span class="process-math">\(-(x_1)^3 &gt; -(x_2)^3\)</span> whenever <span class="process-math">\(x_1 &lt; x_2\)</span> (<a href="" class="xref" data-knowl="./knowl/CNX_Calc_Figure_01_01_010.html" title="Figure 1.36">Figure 1.36</a>).</p>
+<figure class="figure figure-like" id="CNX_Calc_Figure_01_01_010"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/CNX_Calc_Figure_01_01_010.jpg" class="contained" alt='"An image of two graphs. The first graph is labeled “a” and is of the function “f(x) = 3x”, which is an increasing straight line that passes through the origin. The second graph is labeled “b” and is of the function “f(x) = -x cubed”, which is curved function that decreases until the function hits the origin where it becomes level, then decreases again after the origin."'></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.36<span class="period">.</span></span><span class="space"> </span>(a) The function <span class="process-math">\(f(x)=3x\)</span> is increasing on the interval  <span class="process-math">\((-\infty, \infty)\)</span> (b) The function <span class="process-math">\(f(x)=-x^3\)</span> is decreasing on the interval  <span class="process-math">\((-\infty, \infty)\)</span></figcaption></figure><article class="definition definition-like" id="definition-3"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.37</span><span class="period">.</span>
+</h4>
+<p id="p-110">We say that a function <span class="process-math">\(f\)</span> is <dfn class="terminology">concave up on the interval <span class="process-math">\(I\)</span></dfn> if the graph bends upwards on <span class="process-math">\(I\text{.}\)</span></p>
+<p id="p-111">We say that a function <span class="process-math">\(f\)</span> is <dfn class="terminology">concave down on the interval <span class="process-math">\(I\)</span></dfn> if the graph bends downwards on <span class="process-math">\(I\text{.}\)</span></p></article><p id="p-112">For example, the function <span class="process-math">\(f(x)=x^2+1\)</span> is concave up on the entire real line, that is, on the interval <span class="process-math">\((-\infty,\infty)\)</span> since the graph of <span class="process-math">\(f\)</span> bends upwards. Notice that a function may not be concave up/concave down everywhere. It may change concavity. This is illustrated in the following example.</p>
+<p id="p-113">Observe that <span class="process-math">\(g(x)=x^3\)</span> is concave down on the interval <span class="process-math">\((-\infty,0)\)</span> since the graph of <span class="process-math">\(g\)</span> bends upwards on this interval. Moreover, <span class="process-math">\(g\)</span> is concave up on the interval <span class="process-math">\((0,\infty)\)</span> since the graph of <span class="process-math">\(g\)</span> bends downwards on this interval.</p></section><section class="subsection" id="subsection-20"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.3.2</span> <span class="title">Combining Functions</span>
+</h3>
+<section class="introduction" id="introduction-6"><p id="p-114">Now that we have reviewed the basic characteristics of functions, we can see what happens to these properties when we combine functions in different ways, using basic mathematical operations to create new functions. For example, if the cost for a company to manufacture <span class="process-math">\(x\)</span> items is described by the function <span class="process-math">\(C(x)\)</span> and the revenue created by the sale of <span class="process-math">\(x\)</span> items is described by the function <span class="process-math">\(R(x),\)</span> then the profit on the manufacture and sale of <span class="process-math">\(x\)</span> items is defined as <span class="process-math">\(P(x)=R(x)-C(x).\)</span> Using the difference between two functions, we created a new function.</p>
+<p id="p-115">Alternatively, we can create a new function by composing two functions. For example, given the functions <span class="process-math">\(f(x)=x^2\)</span> and <span class="process-math">\(g(x)=3x+1,\)</span> the composite function <span class="process-math">\(f\circ g\)</span> is defined such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(f\circ g)(x)=f(g(x))=(g(x))^2=(3x+1)^2.
+\end{equation*}
+</div>
+<p id="p-116">The composite function <span class="process-math">\(g\circ f\)</span> is defined such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(g\circ f)(x)=g(f(x))=3f(x)+1=3x^2+1.
+\end{equation*}
+</div>
+<p id="p-117">Note that these two new functions are different from each other.</p></section><section class="subsubsection" id="subsubsection-4"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">1.3.2.1</span> <span class="title">Combining Functions with Mathematical Operators</span>
+</h4>
+<p id="p-118">To combine functions using mathematical operators, we simply write the functions with the operator and simplify. Given two functions <span class="process-math">\(f\)</span> and <span class="process-math">\(g,\)</span> we can define four new functions:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-2">
+\begin{align*}
+(f+g)(x)=f(x)+g(x) \amp \amp \text{Sum} \\
+(f-g)(x)=f(x)-g(x) \amp \amp \text{Difference} \\
+(f·g)(x)=f(x)g(x) \amp \amp \text{Product} \\
+\left(\frac{f}{g}\right)(x)=\frac{f(x)}{g(x)} \text{ for } g(x) \neq 0 \amp \amp \text{Quotient} 
+\end{align*}
+</div>
+<article class="example example-like" id="example-8"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.38</span><span class="period">.</span><span class="space"> </span><span class="title">Combining Functions Using Mathematical Operations.</span>
+</h5>
+<p id="p-119">Given the functions <span class="process-math">\(f(x)=2x-3\)</span> and <span class="process-math">\(g(x)=x^2-1,\)</span> find each of the following functions and state its domain.</p>
+<ol class="decimal">
+<li id="li-149"><p id="p-derived-li-149"><span class="process-math">\(\displaystyle (f+g)(x)\)</span></p></li>
+<li id="li-150"><p id="p-derived-li-150"><span class="process-math">\(\displaystyle (f-g)(x)\)</span></p></li>
+<li id="li-151"><p id="p-derived-li-151"><span class="process-math">\(\displaystyle (f·g)(x)\)</span></p></li>
+<li id="li-152"><p id="p-derived-li-152"><span class="process-math">\(\displaystyle \left(\frac{f}{g}\right)(x)\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like"><ol class="decimal">
+<li id="li-153"><p id="p-derived-li-153"><span class="process-math">\((f+g)(x)=(2x-3)+(x^2-1)=x^2+2x-4.\)</span> The domain of this function is the interval <span class="process-math">\((-\infty,\infty).\)</span></p></li>
+<li id="li-154"><p id="p-derived-li-154"><span class="process-math">\((f-g)(x)=(2x-3)-(x^2-1)=-x^2+2x-2.\)</span> The domain of this function is the interval <span class="process-math">\((-\infty,\infty).\)</span></p></li>
+<li id="li-155"><p id="p-derived-li-155"><span class="process-math">\((f·g)(x)=(2x-3)(x^2-1)=2x^3-3x^2-2x+3.\)</span> The domain of this function is the interval <span class="process-math">\((-\infty,\infty).\)</span></p></li>
+<li id="li-156"><p id="p-derived-li-156"><span class="process-math">\(\left(\frac{f}{g}\right)(x)=\frac{2x-3}{x^2-1}.\)</span> The domain of this function is <span class="process-math">\(\{x|x\neq\pm 1\}.\)</span></p></li>
+</ol></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-6"><h5 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.39</span><span class="period">.</span>
+</h5>
+<p id="p-120">For <span class="process-math">\(f(x)=x^2+3\)</span> and <span class="process-math">\(g(x)=2x-5,\)</span> find <span class="process-math">\(\left(f/g\right)(x)\)</span> and state its domain.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-6" id="hint-6"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-6"><div class="hint solution-like"><p id="p-121">The new function <span class="process-math">\((f/g)(x)\)</span> is a quotient of two functions. For what values of <span class="process-math">\(x\)</span> is the denominator zero?</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-14" id="solution-14"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like"><p id="p-122"><span class="process-math">\((\frac{f}{g})(x)=\frac{x^2+3}{2x-5}.\)</span> The domain is <span class="process-math">\(\{x|x\neq\frac{5}{2}\}.\)</span></p></div></div>
+</div></article></section><section class="subsubsection" id="subsubsection-5"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">1.3.2.2</span> <span class="title">Function Composition</span>
+</h4>
+<p id="p-123">When we compose functions, we take a function of a function. For example, suppose the temperature <span class="process-math">\(T\)</span> on a given day is described as a function of time <span class="process-math">\(t\)</span> (measured in hours after midnight) as in <a href="" class="xref" data-knowl="./knowl/fs-id1170572114646.html" title="Table 1.20: Temperature as a Function of Time of Day">Table 1.20</a>. Suppose the cost <span class="process-math">\(C,\)</span> to heat or cool a building for 1 hour, can be described as a function of the temperature <span class="process-math">\(T.\)</span> Combining these two functions, we can describe the cost of heating or cooling a building as a function of time by evaluating <span class="process-math">\(C(T(t)).\)</span> We have defined a new function, denoted <span class="process-math">\(C\circ T,\)</span> which is defined such that <span class="process-math">\((C\circ T)(t)=C(T(t))\)</span> for all <span class="process-math">\(t\)</span> in the domain of <span class="process-math">\(T.\)</span> This new function is called a composite function. We note that since cost is a function of temperature and temperature is a function of time, it makes sense to define this new function <span class="process-math">\((C\circ T)(t).\)</span> It does not make sense to consider <span class="process-math">\((T\circ C)(t),\)</span> because temperature is not a function of cost.</p>
+<article class="definition definition-like" id="definition-4"><h5 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.40</span><span class="period">.</span>
+</h5>
+<p id="p-124">Consider the function <span class="process-math">\(f\)</span> with domain <span class="process-math">\(A\)</span> and range <span class="process-math">\(B,\)</span> and the function <span class="process-math">\(g\)</span> with domain <span class="process-math">\(D\)</span> and range <span class="process-math">\(E.\)</span> If <span class="process-math">\(B\)</span> is a subset of <span class="process-math">\(D,\)</span> then the <dfn class="terminology">composite function</dfn> <span class="process-math">\((g\circ  f)(x)\)</span> is the function with domain <span class="process-math">\(A\)</span> such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(g\circ f)(x)=g(f(x)).
+\end{equation*}
+</div></article><p id="p-125">A composite function <span class="process-math">\(g\circ f\)</span> can be viewed in two steps. First, the function <span class="process-math">\(f\)</span> maps each input <span class="process-math">\(x\)</span> in the domain of <span class="process-math">\(f\)</span> to its output <span class="process-math">\(f(x)\)</span> in the range of <span class="process-math">\(f.\)</span> Second, since the range of <span class="process-math">\(f\)</span> is a subset of the domain of <span class="process-math">\(g,\)</span> the output <span class="process-math">\(f(x)\)</span> is an element in the domain of <span class="process-math">\(g,\)</span> and therefore it is mapped to an output <span class="process-math">\(g(f(x))\)</span> in the range of <span class="process-math">\(g.\)</span> In <a href="" class="xref" data-knowl="./knowl/CNX_Calc_Figure_01_01_011.html" title="Figure 1.41">Figure 1.41</a>, we see a visual image of a composite function.</p>
+<figure class="figure figure-like" id="CNX_Calc_Figure_01_01_011"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_01_011.jpg" class="contained" alt='"An image with three items. The first item is a blue bubble that has two labels: “domain of f” and “domain of g of f”. This item contains the numbers 1, 2, and 3. The second item is two bubbles: an orange bubble labeled “domain of g” and a blue bubble that is completely contained within the orange bubble and is labeled “range of f”. The blue bubble contains the numbers 0 and 1, which are thus also contained within the larger orange bubble. The orange bubble contains two numbers not contained within the smaller blue bubble, which are 2 and 3. The third item is two bubbles: an orange bubble labeled “range of g” and a blue bubble that is completely contained within the orange bubble and is labeled “range of g of f”. The blue bubble contains the numbers 4 and 5, which are thus also contained within the larger orange bubble. The orange bubble contains one number not contained within the smaller blue bubble, which is the number 3. The first item points has a blue arrow with the label “f” that points to the blue bubble in the second item. The orange bubble in the second item has an orange arrow labeled “g” that points the orange bubble in the third item. The first item has a blue arrow labeled “g of f” which points to the blue bubble in the third item. There are three blue arrows pointing from numbers in the first item to the numbers contained in the blue bubble of the second item. The first blue arrow points from the 1 to the 0, the second blue arrow points from the 2 to the 1, and the third blue arrow points from the 3 to the 0. There are 4 orange arrows pointing from the numbers contained in the orange bubble in the second item, including those also contained in the blue bubble of the second item, to the numbers contained in the orange bubble of the third item, including the numbers in the blue bubble of the third item. The first orange arrow points from 2 to 3, the second orange arrow points from 3 to 5, the third orange arrow points from 0 to 4, and the fourth orange arrow points from 1 to 5."'></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.41<span class="period">.</span></span><span class="space"> </span>For the composite function <span class="process-math">\(g\circ f,\)</span> we have <span class="process-math">\((g\circ f)(1)=4,(g\circ f)(2)=5,\)</span> and <span class="process-math">\((g\circ f)(3)=4.\)</span></figcaption></figure><article class="example example-like" id="fs-id1170572481349"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.42</span><span class="period">.</span><span class="space"> </span><span class="title">Compositions of Functions Defined by Formulas.</span>
+</h5>
+<p id="p-126">Consider the functions <span class="process-math">\(f(x)=x^2+1\)</span> and <span class="process-math">\(g(x)=1/x.\)</span></p>
+<ol class="decimal">
+<li id="li-157"><p id="p-derived-li-157">Find <span class="process-math">\((g\circ f)(x)\)</span> and state its domain and range.</p></li>
+<li id="li-158"><p id="p-derived-li-158">Evaluate <span class="process-math">\((g\circ f)(4),(g\circ f)(-1/2).\)</span></p></li>
+<li id="li-159"><p id="p-derived-li-159">Find <span class="process-math">\((f\circ g)(x)\)</span> and state its domain and range.</p></li>
+<li id="li-160"><p id="p-derived-li-160">Evaluate <span class="process-math">\((f\circ g)(4),(f\circ g)(-1/2).\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-fs-id1170572222941" id="fs-id1170572222941"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-fs-id1170572222941"><div class="solution solution-like"><ol class="decimal">
+<li id="li-161"><p id="p-derived-li-161">We can find the formula for <span class="process-math">\((g\circ f)(x)\)</span> in two different ways. We could write<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(g\circ f)(x)=g(f(x))=g(x^2+1)=\frac{1}{x^2+1}.
+\end{equation*}
+</div>Alternatively, we could write<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(g\circ f)(x)=g(f(x))=\frac{1}{f(x)}=\frac{1}{x^2+1}.
+\end{equation*}
+</div>Since <span class="process-math">\(x^2+1\neq 0\)</span> for all real numbers <span class="process-math">\(x,\)</span> the domain of <span class="process-math">\((g\circ f)(x)\)</span> is the set of all real numbers. Since <span class="process-math">\(0 \lt 1/(x^2+1) \leq 1,\)</span> the range is, at most, the interval <span class="process-math">\((0,1].\)</span> To show that the range is this entire interval, we let <span class="process-math">\(y=1/(x^2+1)\)</span> and solve this equation for <span class="process-math">\(x\)</span> to show that for all <span class="process-math">\(y\)</span> in the interval <span class="process-math">\((0,1],\)</span> there exists a real number <span class="process-math">\(x\)</span> such that <span class="process-math">\(y=1/(x^2+1).\)</span> Solving this equation for <span class="process-math">\(x,\)</span> we see that <span class="process-math">\(x^2+1=1/y,\)</span> which implies that<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+x=\pm\sqrt{\frac{1}{y}-1}.
+\end{equation*}
+</div>If <span class="process-math">\(y\)</span> is in the interval <span class="process-math">\((0,1],\)</span> the expression under the radical is nonnegative, and therefore there exists a real number <span class="process-math">\(x\)</span> such that <span class="process-math">\(1/(x^2+1)=y.\)</span> We conclude that the range of <span class="process-math">\(g\circ f\)</span> is the interval <span class="process-math">\((0,1].\)</span></p></li>
+<li id="li-162"><p id="p-derived-li-162"><span class="process-math">\((g\circ f)(4)=g(f(4))=g(4^2+1)=g(17)=\frac{1}{17}\)</span>  and <span class="process-math">\((g\circ f)(-\frac{1}{2})=g(f(-\frac{1}{2}))=g((-\frac{1}{2})^2+1)=g(\frac{5}{4})=\frac{4}{5}\)</span></p></li>
+<li id="li-163"><p id="p-derived-li-163">We can find a formula for <span class="process-math">\((f\circ g)(x)\)</span> in two ways. First, we could write<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(f\circ g)(x)=f(g(x))=f\left(\frac{1}{x}\right)=\left(\frac{1}{x}\right)^2+1.
+\end{equation*}
+</div>Alternatively, we could write<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(f\circ g)(x)=f(g(x))=(g(x))^2+1=\left(\frac{1}{x}\right)^2+1.
+\end{equation*}
+</div>The domain of <span class="process-math">\(f\circ g\)</span> is the set of all real numbers <span class="process-math">\(x\)</span> such that <span class="process-math">\(x\neq 0.\)</span> To find the range of <span class="process-math">\(f,\)</span> we need to find all values <span class="process-math">\(y\)</span> for which there exists a real number <span class="process-math">\(x\neq0\)</span> such that<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left(\frac{1}{x}\right)^2+1=y.
+\end{equation*}
+</div>Solving this equation for <span class="process-math">\(x,\)</span> we see that we need <span class="process-math">\(x\)</span> to satisfy<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left(\frac{1}{x}\right)^2=y-1,
+\end{equation*}
+</div>which simplifies to<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{1}{x}=\pm\sqrt{y-1}.
+\end{equation*}
+</div>Finally, we obtain<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+x=\pm\frac{1}{\sqrt{y-1}}.
+\end{equation*}
+</div>Since <span class="process-math">\(1/\sqrt{y-1}\)</span> is a real number if and only if <span class="process-math">\(y\gt 1,\)</span> the range of <span class="process-math">\(f\)</span> is the set <span class="process-math">\(\{y|y\gt 1\}.\)</span></p></li>
+<li id="li-164"><p id="p-derived-li-164"><span class="process-math">\((f\circ g)(4)=f(g(4))=f(\frac{1}{4})=(\frac{1}{4})^2+1=\frac{17}{16}\)</span> <span class="process-math">\((f\circ g)(-\frac{1}{2})=f(g(-\frac{1}{2}))=f(-2)=(-2)^2+1=5\)</span></p></li>
+</ol></div></div>
+</div></article><p id="p-127">In <a href="" class="xref" data-knowl="./knowl/fs-id1170572481349.html" title="Example 1.42: Compositions of Functions Defined by Formulas">Example 1.42</a>, we can see that <span class="process-math">\((f\circ g)(x)\neq(g\circ f)(x).\)</span> This tells us, in general terms, that the order in which we compose functions matters.</p>
+<article class="exercise exercise-like" id="exercise-7"><h5 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.43</span><span class="period">.</span>
+</h5>
+<p id="p-128">Let <span class="process-math">\(f(x)=2-5x.\)</span> Let <span class="process-math">\(g(x)=\sqrt{x}.\)</span> Find <span class="process-math">\((f\circ g)(x).\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like"><p id="p-129"><span class="process-math">\((f\circ g)(x)=2-5\sqrt{x}.\)</span></p></div></div>
+</div></article><article class="example example-like" id="example-10"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.44</span><span class="period">.</span><span class="space"> </span><span class="title">Composition of Functions Defined by Tables.</span>
+</h5>
+<p id="p-130">Test</p>
+<p id="p-131">Consider the functions <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> described by <a href="" class="xref" data-knowl="./knowl/fs-id1170572173822.html" title="Table 1.45">Table 1.45</a> and <a href="" class="xref" data-knowl="./knowl/fs-id1170572550754.html" title="Table 1.46">Table 1.46</a>.</p>
+<figure class="table table-like" id="fs-id1170572173822"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.45<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(x\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(-3\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+</tr>
+<tr>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(f(x)\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+</tr>
+</table></div></figure><figure class="table table-like" id="fs-id1170572550754"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.46<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(x\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(-4\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+</tr>
+<tr>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(g(x)\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+</tr>
+</table></div></figure><ol class="decimal">
+<li id="li-165"><p id="p-derived-li-165">Evaluate <span class="process-math">\((g\circ f)(3),(g\circ f)(0).\)</span></p></li>
+<li id="li-166"><p id="p-derived-li-166">State the domain and range of <span class="process-math">\((g\circ f)(x).\)</span></p></li>
+<li id="li-167"><p id="p-derived-li-167">Evaluate <span class="process-math">\((f\circ f)(3),(f\circ f)(1).\)</span></p></li>
+<li id="li-168"><p id="p-derived-li-168">State the domain and range of <span class="process-math">\((f\circ f)(x).\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-17" id="solution-17"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-17"><div class="solution solution-like"><ol class="decimal">
+<li id="li-169"><p id="p-derived-li-169"><span class="process-math">\((g\circ f)(3)=g(f(3))=g(-2)=0\)</span> <span class="process-math">\((g\circ f)(0)=g(4)=5\)</span></p></li>
+<li id="li-170"><p id="p-derived-li-170">The domain of <span class="process-math">\(g\circ f\)</span> is the set <span class="process-math">\(\{-3,-2,-1,0,1,2,3,4\}.\)</span> Since the range of <span class="process-math">\(f\)</span> is the set <span class="process-math">\(\{-2,0,2,4\},\)</span> the range of <span class="process-math">\(g\circ f\)</span> is the set <span class="process-math">\({0,3,5}.\)</span></p></li>
+<li id="li-171"><p id="p-derived-li-171"><span class="process-math">\((f\circ f)(3)=f(f(3))=f(-2)=4\)</span> <span class="process-math">\((f\circ f)(1)=f(f(1))=f(-2)=4\)</span></p></li>
+<li id="li-172"><p id="p-derived-li-172">The domain of <span class="process-math">\(f\circ f\)</span> is the set <span class="process-math">\(\{-3,-2,-1,0,1,2,3,4\}.\)</span> Since the range of <span class="process-math">\(f\)</span> is the set <span class="process-math">\(\{-2,0,2,4\},\)</span> the range of <span class="process-math">\(f\circ f\)</span> is the set <span class="process-math">\(\{0,4\}.\)</span></p></li>
+</ol></div></div>
+</div></article><article class="example example-like" id="example-11"><h5 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.47</span><span class="period">.</span><span class="space"> </span><span class="title">Application Involving a Composite Function.</span>
+</h5>
+<p id="p-132">A store is advertising a sale of <span class="process-math">\(20\%\)</span> off all merchandise. Caroline has a coupon that entitles her to an additional <span class="process-math">\(15\%\)</span> off any item, including sale merchandise. If Caroline decides to purchase an item with an original price of <span class="process-math">\(x\)</span> dollars, how much will she end up paying if she applies her coupon to the sale price? Solve this problem by using a composite function.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-18" id="solution-18"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-18"><div class="solution solution-like"><p id="p-133">Since the sale price is <span class="process-math">\(20\%\)</span> off the original price, if an item is <span class="process-math">\(x\)</span> dollars, its sale price is given by <span class="process-math">\(f(x)=0.80x.\)</span> Since the coupon entitles an individual to <span class="process-math">\(15\%\)</span> off the price of any item, if an item is <span class="process-math">\(y\)</span> dollars, the price, after applying the coupon, is given by <span class="process-math">\(g(y)=0.85y.\)</span> Therefore, if the price is originally <span class="process-math">\(x\)</span> dollars, its sale price will be <span class="process-math">\(f(x)=0.80x\)</span> and then its final price after the coupon will be <span class="process-math">\(g(f(x))=0.85(0.80x)=0.68x.\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-8"><h5 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.48</span><span class="period">.</span>
+</h5>
+<p id="p-134">If items are on sale for <span class="process-math">\(10\%\)</span> off their original price, and a customer has a coupon for an additional <span class="process-math">\(30\%\)</span> off, what will be the final price for an item that is originally <span class="process-math">\(x\)</span> dollars, after applying the coupon to the sale price?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-7" id="hint-7"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like"><p id="p-135">The sale price of an item with an original price of <span class="process-math">\(x\)</span> dollars is <span class="process-math">\(f(x)=0.90x.\)</span> The coupon price for an item that is <span class="process-math">\(y\)</span> dollars is <span class="process-math">\(g(y)=0.70y.\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-19" id="solution-19"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-19"><div class="solution solution-like"><p id="p-136"><span class="process-math">\((g\circ f)(x)=0.63x\)</span></p></div></div>
+</div></article></section></section><section class="subsection" id="subsection-21"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.3.3</span> <span class="title">Symmetry of Functions</span>
+</h3>
+<p id="p-137">The graphs of certain functions have symmetry properties that help us understand the function and the shape of its graph. For example, consider the function <span class="process-math">\(f(x)=x^4-2x^2-3\)</span> shown in <a href="" class="xref" data-knowl="./knowl/CNX_Calc_Figure_01_01_012.html" title="Figure 1.49">Figure 1.49</a>(a). If we take the part of the curve that lies to the right of the <span class="process-math">\(y\)</span>-axis and flip it over the <span class="process-math">\(y\)</span>-axis, it lays exactly on top of the curve to the left of the <span class="process-math">\(y\)</span>-axis. In this case, we say the function has <dfn class="terminology">symmetry about the <span class="process-math">\(y\)</span>-axis</dfn>. On the other hand, consider the function <span class="process-math">\(f(x)=x^3-4x\)</span> shown in <a href="" class="xref" data-knowl="./knowl/CNX_Calc_Figure_01_01_012.html" title="Figure 1.49">Figure 1.49</a>(b). If we take the graph and rotate it <span class="process-math">\(180^{\circ}\)</span> about the origin, the new graph will look exactly the same. In this case, we say the function has <dfn class="terminology">symmetry about the origin</dfn>.</p>
+<figure class="figure figure-like" id="CNX_Calc_Figure_01_01_012"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/CNX_Calc_Figure_01_01_012.jpg" class="contained" alt='"An image of two graphs. The first graph is labeled “(a), symmetry about the y-axis” and is of the curved function “f(x) = (x to the 4th) - 2(x squared) - 3”. The x axis runs from -3 to 4 and the y axis runs from -4 to 5. This function decreases until it hits the point (-1, -4), which is minimum of the function. Then the graph increases to the point (0,3), which is a local maximum. Then the the graph decreases until it hits the point (1, -4), before it increases again. The second graph is labeled “(b), symmetry about the origin” and is of the curved function “f(x) = x cubed - 4x”. The x axis runs from -3 to 4 and the y axis runs from -4 to 5. The graph of the function starts at the x intercept at (-2, 0) and increases until the approximate point of (-1.2, 3.1). The function then decreases, passing through the origin, until it hits the approximate point of (1.2, -3.1). The function then begins to increase again and has another x intercept at (2, 0)."'></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.49<span class="period">.</span></span><span class="space"> </span>(a) A graph that is symmetric about the <span class="process-math">\(y\)</span>-axis. (b) A graph that is symmetric about the origin.</figcaption></figure><p id="p-138">If we are given the graph of a function, it is easy to see whether the graph has one of these symmetry properties. But without a graph, how can we determine algebraically whether a function <span class="process-math">\(f\)</span> has symmetry? Looking at <a href="" class="xref" data-knowl="./knowl/CNX_Calc_Figure_01_01_012.html" title="Figure 1.49">Figure 1.49</a>(a) again, we see that since <span class="process-math">\(f\)</span> is symmetric about the <span class="process-math">\(y\)</span>-axis, if the point <span class="process-math">\((x,y)\)</span> is on the graph, the point <span class="process-math">\((-x,y)\)</span> is on the graph. In other words, <span class="process-math">\(f(-x)=f(x).\)</span> If a function <span class="process-math">\(f\)</span> has this property, we say <span class="process-math">\(f\)</span> is an even function, which has symmetry about the <span class="process-math">\(y\)</span>-axis. For example, <span class="process-math">\(f(x)=x^2\)</span> is even because</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/CNX_Calc_Figure_01_01_012.html ./knowl/CNX_Calc_Figure_01_01_012.html ./knowl/CNX_Calc_Figure_01_01_012.html ./knowl/CNX_Calc_Figure_01_01_012.html ./knowl/CNX_Calc_Figure_01_01_013.html">
+\begin{equation*}
+f(-x)=(-x)^2=x^2=f(x).
+\end{equation*}
+</div>
+<p id="p-139">In contrast, looking at <a href="" class="xref" data-knowl="./knowl/CNX_Calc_Figure_01_01_012.html" title="Figure 1.49">Figure 1.49</a>(b) again, if a function <span class="process-math">\(f\)</span> is symmetric about the origin, then whenever the point <span class="process-math">\((x,y)\)</span> is on the graph, the point <span class="process-math">\((-x,-y)\)</span> is also on the graph. In other words, <span class="process-math">\(f(-x)=-f(x).\)</span> If <span class="process-math">\(f\)</span> has this property, we say <span class="process-math">\(f\)</span> is an odd function, which has symmetry about the origin. For example, <span class="process-math">\(f(x)=x^3\)</span> is odd because</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/CNX_Calc_Figure_01_01_012.html ./knowl/CNX_Calc_Figure_01_01_012.html ./knowl/CNX_Calc_Figure_01_01_012.html ./knowl/CNX_Calc_Figure_01_01_012.html ./knowl/CNX_Calc_Figure_01_01_013.html">
+\begin{equation*}
+f(-x)=(-x)^3=-x^3=-f(x).
+\end{equation*}
+</div>
+<article class="definition definition-like" id="definition-5"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.50</span><span class="period">.</span>
+</h4>
+<p id="p-140">If <span class="process-math">\(f(x)=f(-x)\)</span> for all <span class="process-math">\(x\)</span> in the domain of <span class="process-math">\(f,\)</span> then <span class="process-math">\(f\)</span> is an <dfn class="terminology">even function</dfn>. An even function is symmetric about the <span class="process-math">\(y\)</span>-axis.</p>
+<p id="p-141">If <span class="process-math">\(f(-x)=-f(x)\)</span> for all <span class="process-math">\(x\)</span> in the domain of <span class="process-math">\(f,\)</span> then <span class="process-math">\(f\)</span> is an <dfn class="terminology">odd function</dfn>. An odd function is symmetric about the origin.</p></article><article class="example example-like" id="example-12"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.51</span><span class="period">.</span><span class="space"> </span><span class="title">Even and Odd Functions.</span>
+</h4>
+<p id="p-142">Determine whether each of the following functions is even, odd, or neither.</p>
+<ol class="decimal">
+<li id="li-173"><p id="p-derived-li-173"><span class="process-math">\(\displaystyle f(x)=-5x^4+7x^2-2\)</span></p></li>
+<li id="li-174"><p id="p-derived-li-174"><span class="process-math">\(\displaystyle f(x)=2x^5-4x+5\)</span></p></li>
+<li id="li-175"><p id="p-derived-li-175"><span class="process-math">\(\displaystyle f(x)=\frac{3x}{x^2+1}\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-20" id="solution-20"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-20"><div class="solution solution-like">
+<p id="p-143">To determine whether a function is even or odd, we evaluate <span class="process-math">\(f(-x)\)</span> and compare it to <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(-f(x).\)</span></p>
+<ol class="decimal">
+<li id="li-176"><p id="p-derived-li-176"><span class="process-math">\(f(-x)=-5(-x)^4+7(-x)^2-2=-5x^4+7x^2-2=f(x).\)</span> Therefore, <span class="process-math">\(f\)</span> is even.</p></li>
+<li id="li-177"><p id="p-derived-li-177"><span class="process-math">\(f(-x)=2(-x)^5-4(-x)+5=-2x^5+4x+5.\)</span> Now, <span class="process-math">\(f(-x)\neq f(x).\)</span> Furthermore, noting that <span class="process-math">\(-f(x)=-2x^5+4x-5,\)</span> we see that <span class="process-math">\(f(-x)\neq-f(x).\)</span> Therefore, <span class="process-math">\(f\)</span> is neither even nor odd.</p></li>
+<li id="li-178"><p id="p-derived-li-178"><span class="process-math">\(f(-x)=3(-x)/(-x)^2+1=-3x/(x^2+1)=-[3x/(x^2+1)]=-f(x).\)</span> Therefore, <span class="process-math">\(f\)</span> is odd.</p></li>
+</ol>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-9"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.52</span><span class="period">.</span>
+</h4>
+<p id="p-144">Determine whether <span class="process-math">\(f(x)=4x^3-5x\)</span> is even, odd, or neither.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-8" id="hint-8"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-8"><div class="hint solution-like"><p id="p-145">Compare <span class="process-math">\(f(-x)\)</span> with <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(-f(x).\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-21" id="solution-21"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-21"><div class="solution solution-like"><p id="p-146"><span class="process-math">\(f(x)\)</span> is odd.</p></div></div>
+</div></article><p id="p-147">One symmetric function that arises frequently is the <dfn class="terminology">absolute value function</dfn>, written as <span class="process-math">\(|x|.\)</span> The absolute value function is defined as</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/CNX_Calc_Figure_01_01_012.html ./knowl/CNX_Calc_Figure_01_01_012.html ./knowl/CNX_Calc_Figure_01_01_012.html ./knowl/CNX_Calc_Figure_01_01_012.html ./knowl/CNX_Calc_Figure_01_01_013.html">
+\begin{equation*}
+f(x)=\begin{cases}x \amp x \lt 0 \\ x \amp x \geq 0\end{cases}\text{.}
+\end{equation*}
+</div>
+<p id="p-148">Some students describe this function by stating that it “makes everything positive.” By the definition of the absolute value function, we see that if <span class="process-math">\(x \lt 0,\)</span> then <span class="process-math">\(|x|=-x \gt 0,\)</span> and if <span class="process-math">\(x\gt 0,\)</span> then <span class="process-math">\(|x|=x\gt 0.\)</span> However, for <span class="process-math">\(x=0,|x|=0.\)</span> Therefore, it is more accurate to say that for all nonzero inputs, the output is positive, but if <span class="process-math">\(x=0,\)</span> the output <span class="process-math">\(|x|=0.\)</span> We conclude that the range of the absolute value function is <span class="process-math">\(\{y|y \geq 0\}.\)</span> In <a href="" class="xref" data-knowl="./knowl/CNX_Calc_Figure_01_01_013.html" title="Figure 1.53">Figure 1.53</a>, we see that the absolute value function is symmetric about the <span class="process-math">\(y\)</span>-axis and is therefore an even function.</p>
+<figure class="figure figure-like" id="CNX_Calc_Figure_01_01_013"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/CNX_Calc_Figure_01_01_013.jpg" class="contained" alt='"An image of a graph. The x axis runs from -3 to 3 and the y axis runs from -4 to 4. The graph is of the function “f(x) = absolute value of x”. The graph starts at the point (-3, 3) and decreases in a straight line until it hits the origin. Then the graph increases in a straight line until it hits the point (3, 3)."'></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.53<span class="period">.</span></span><span class="space"> </span>The graph of <span class="process-math">\(f(x)=|x|\)</span> is symmetric about the <span class="process-math">\(y\)</span>-axis.</figcaption></figure><article class="example example-like" id="example-13"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.54</span><span class="period">.</span><span class="space"> </span><span class="title">Working with the Absolute Value Function.</span>
+</h4>
+<p id="p-149">Find the domain and range of the function <span class="process-math">\(f(x)=2|x-3|+4.\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-22" id="solution-22"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-22"><div class="solution solution-like">
+<p id="p-150">Since the absolute value function is defined for all real numbers, the domain of this function is <span class="process-math">\((-\infty,\infty).\)</span> Since <span class="process-math">\(|x-3|\geq 0\)</span> for all <span class="process-math">\(x,\)</span> the function <span class="process-math">\(f(x)=2|x-3|+4\geq 4.\)</span> Therefore, the range is, at most, the set <span class="process-math">\(\{y|y\geq 4\}.\)</span> To see that the range is, in fact, this whole set, we need to show that for <span class="process-math">\(y\geq 4\)</span> there exists a real number <span class="process-math">\(x\)</span> such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+2|x-3|+4=y.
+\end{equation*}
+</div>
+<p id="p-151">A real number <span class="process-math">\(x\)</span> satisfies this equation as long as</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+|x-3|=\frac{1}{2}(y-4).
+\end{equation*}
+</div>
+<p id="p-152">Since <span class="process-math">\(y\geq 4,\)</span> we know <span class="process-math">\(y-4\geq 0,\)</span> and thus the right-hand side of the equation is nonnegative, so it is possible that there is a solution. Furthermore,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+|x-3|=\begin{cases}-(x-3) \amp \text{ if } x\lt  3 \\x-3 \amp \text{ if }x \geq 3. \end{cases}
+\end{equation*}
+</div>
+<p id="p-153">Therefore, we see there are two solutions:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+x=\pm\frac{1}{2}(y-4)+3.
+\end{equation*}
+</div>
+<p id="p-154">The range of this function is <span class="process-math">\(\{y|y\geq 4\}.\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-10"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.55</span><span class="period">.</span>
+</h4>
+<p id="p-155">For the function <span class="process-math">\(f(x)=|x+2|-4,\)</span> find the domain and range.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-9" id="hint-9"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-9"><div class="hint solution-like"><p id="p-156"><span class="process-math">\(|x+2|\geq 0\)</span> for all real numbers <span class="process-math">\(x.\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-23" id="solution-23"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-23"><div class="solution solution-like"><p id="p-157">Domain = <span class="process-math">\((-\infty,\infty),\)</span> range = <span class="process-math">\(\{y|y\geq -4\}.\)</span></p></div></div>
+</div></article></section><section class="subsection" id="subsection-22"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.3.4</span> <span class="title">Key Concepts</span>
+</h3>
+<ol class="decimal">
+<li id="li-179"><p id="p-derived-li-179">A function is a mapping from a set of inputs to a set of outputs with exactly one output for each input.</p></li>
+<li id="li-180"><p id="p-derived-li-180">If no domain is stated for a function <span class="process-math">\(y=f(x),\)</span> the domain is considered to be the set of all real numbers <span class="process-math">\(x\)</span> for which the function is defined.</p></li>
+<li id="li-181"><p id="p-derived-li-181">When sketching the graph of a function <span class="process-math">\(f,\)</span> each vertical line may intersect the graph, at most, once.</p></li>
+<li id="li-182"><p id="p-derived-li-182">A function may have any number of zeros, but it has, at most, one <span class="process-math">\(y\)</span>-intercept.</p></li>
+<li id="li-183"><p id="p-derived-li-183">To define the composition <span class="process-math">\(g\circ f,\)</span> the range of <span class="process-math">\(f\)</span> must be contained in the domain of <span class="process-math">\(g.\)</span></p></li>
+<li id="li-184"><p id="p-derived-li-184">Even functions are symmetric about the <span class="process-math">\(y\)</span>-axis whereas odd functions are symmetric about the origin.</p></li>
+</ol></section><section class="subsection" id="subsection-23"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.3.5</span> <span class="title">Key Equations</span>
+</h3>
+<ol class="decimal">
+<li id="li-185"><p id="p-derived-li-185">Composition of two functions <span class="process-math">\((g\circ f)(x)=g(f(x))\)</span></p></li>
+<li id="li-186"><p id="p-derived-li-186">Absolute value function<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x)=\begin{cases}x \amp x \lt 0 \\ x \amp x \geq 0\end{cases}\text{.}
+\end{equation*}
+</div></p></li>
+</ol></section><section class="conclusion" id="conclusion-3"><p id="p-158">This book is a custom edition based on OpenStax Calculus Volume 1. You can download the original for free at <a class="external" href="https://openstax.org/details/books/calculus-volume-1" target="_blank">https://openstax.org/details/books/calculus-volume-1.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 1 </sup></a></p>
+<p id="p-159">Additional practice exercises are available in at the bottom on this section in OpenStax Calculus Volume 1: <a class="external" href="https://openstax.org/books/calculus-volume-1/pages/1-1-review-of-functions" target="_blank"><code class="code-inline tex2jax_ignore">https://openstax.org/books/calculus-volume-1/pages/1-1-review-of-functions</code></a></p></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn"><code class="code-inline tex2jax_ignore">https://openstax.org/details/books/calculus-volume-1</code></div></div>
+</div></main>
+</div>
+</body>
+</html>
